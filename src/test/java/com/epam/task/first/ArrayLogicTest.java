@@ -5,7 +5,6 @@ import com.epam.task.first.entities.Array;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayLogicTest {
@@ -210,7 +209,6 @@ public class ArrayLogicTest {
         Assert.assertEquals(3, actual);
 
     }
-
 
 }
 

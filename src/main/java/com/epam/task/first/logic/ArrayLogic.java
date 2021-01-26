@@ -1,6 +1,9 @@
 package com.epam.task.first.logic;
 
 import com.epam.task.first.entities.Array;
+import com.epam.task.first.logic.sort.ArraySort;
+import com.epam.task.first.logic.sort.factory.SortFactory;
+import com.epam.task.first.logic.sort.factory.SortTypes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -158,6 +161,18 @@ public class ArrayLogic {
         }
 
         return countOfNegativeNumbers;
+
+    }
+
+    public Array sort(Array array, SortTypes type) {
+
+        SortFactory factory = new SortFactory();
+
+        ArraySort arraySort = factory.create(type);
+
+        Array sortedArray = arraySort.sort(array);
+
+        return sortedArray;
 
     }
 
