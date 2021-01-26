@@ -29,7 +29,8 @@ public class ArrayCreatorTest {
         ArrayValidator validator = Mockito.mock(ArrayValidator.class);
         when(validator.validate(anyString())).thenReturn(true);
 
-        ArrayParser parser = new ArrayParser();
+        ArrayParser parser = Mockito.mock(ArrayParser.class);
+        when(parser.parse(anyString())).thenReturn(new Array(2, 3, 4, 65));
 
         ArrayCreator creator = new ArrayCreator(validator, parser, reader);
 
